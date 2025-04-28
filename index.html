@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções Limitadas Shopee!!</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+         {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            margin-top: 120px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .cabecalho {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: orange;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        .logo-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+        }
+
+        .menu-topo {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu-topo a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .menu-topo a:hover {
+            color: darkred;
+        }
+
+        .categorias {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .categoria {
+            background-color: darkorange;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .categoria:hover {
+            background-color: orangered;
+            transform: scale(1.05);
+        }
+
+        .produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .produto {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .produto:hover {
+            transform: scale(1.05);
+        }
+
+        .produto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .produto h3 {
+            margin: 15px 0 10px;
+            font-size: 20px;
+        }
+
+        .produto p {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: darkorange;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: orange;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .botao:hover {
+            background-color: orangered;
+        }
+
+        .topo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 18px;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+        }
+
+        .topo:hover {
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="topo" class="cabecalho">
+        <div class="logo-menu">
+            <img src="https://img.icons8.com/fluency/96/000000/shopping-cart-loaded.png" alt="Logo Carrinho" class="logo">
+            <h1>PROMOÇÕES LIMITADAS SHOPPE!!</h1>
+        </div>
+        <nav class="menu-topo">
+            <a href="#eletronicos">Eletrônicos</a>
+            <a href="#roupas">Roupas</a>
+            <a href="#acessorios">Acessórios</a>
+        </nav>
+    </header>
+
+    <section class="categorias">
+        <a href="#eletronicos" class="categoria">Eletrônicos</a>
+        <a href="#roupas" class="categoria">Roupas</a>
+        <a href="#acessorios" class="categoria">Acessórios</a>
+    </section>
+
+    <section class="produtos">
+        <!-- Produto 1 -->
+        <div class="produto" id="eletronicos">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lvsmjs1xifqkef.webp" alt="Produto Eletrônico">
+            <h3>Fone de Ouvido Bluetooth</h3>
+            <p>R$ 99,99</p>
+            <a href=" https://s.shopee.com.br/7pgHXClrFe?share_channel_code=1" class="botao">Comprar na Shopee</a>
+        </div>
+
+        <div class="produto" id="roupas">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m2afie1yvsdt05.webp" alt="Roupa Feminina">
+            <h3>Vestido Floral</h3>
+            <p>R$ 118,99</p>
+            <a href="https://s.shopee.com.br/9UoVWJ56TW?share_channel_code=1" class="botao">Comprar na Shopee</a>
+        </div>
+
+        <div class="produto" id="acessorios">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lmx6i14ecqykc1.webp" alt="Acessório">
+            <h3>Relógio Inteligente</h3>
+            <p>R$ 59,00</p>
+            <a href="https://s.shopee.com.br/5pvD9beBTq?share_channel_code=1" class="botao">Comprar na Shopee</a>
+        </div>
+
+        <div class="produto">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lxex8099x5fj88@resize_w450_nl.webp" alt="Produto Promoção">
+            <h3>Tênis Esportivo Unissex</h3>
+            <p>R$ 106,90</p>
+            <a href="https://s.shopee.com.br/2B1umvm7xQ?share_channel_code=1" class="botao">Comprar na Shopee</a>
+        </div>
+
+        <div class="produto">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lyf8bvod9iw526.webp" alt="Produto Eletronico">
+            <h3>Caixa de Som Bluetooth</h3>
+            <p>R$ 109,90</p>
+            <a href="https://s.shopee.com.br/9f7vijwljW?share_channel_code=1" class="botao">Comprar na Shopee</a>
+        </div>
+    </section>
+
+    <a href="#topo" class="topo">↑</a>
+
+</body>
+</html>
