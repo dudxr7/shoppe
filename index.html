@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promoções Limitadas Shopee!!</title>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+        </style>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     
@@ -168,11 +174,12 @@
             <img src="https://img.icons8.com/fluency/96/000000/shopping-cart-loaded.png" alt="Logo Carrinho" class="logo">
             <h1>PROMOÇÕES LIMITADAS SHOPPE!!</h1>
         </div>
-        <nav class="menu-topo">
-            <a href="#eletronicos">Eletrônicos</a>
-            <a href="#roupas">Roupas</a>
-            <a href="#acessorios">Acessórios</a>
-        </nav>
+       <section class="categorias">
+    <a href="#" class="categoria" onclick="filtrarProdutos('eletronicos')">Eletrônicos</a>
+    <a href="#" class="categoria" onclick="filtrarProdutos('roupas')">Roupas</a>
+    <a href="#" class="categoria" onclick="filtrarProdutos('acessorios')">Acessórios</a>
+    <a href="#" class="categoria" onclick="mostrarTodos()">Ver Todos</a>
+</section>
     </header>
 
     <section class="categorias">
@@ -182,36 +189,36 @@
     </section>
 
     <section class="produtos">
-        <!-- Produto 1 -->
-        <div class="produto" id="eletronicos">
+        
+        <div class="produto eletronicos">
             <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lvsmjs1xifqkef.webp" alt="Produto Eletrônico">
             <h3>Fone de Ouvido Bluetooth</h3>
             <p>R$ 99,99</p>
             <a href=" https://s.shopee.com.br/7pgHXClrFe?share_channel_code=1" class="botao">Comprar na Shopee</a>
         </div>
 
-        <div class="produto" id="roupas">
+        <div class="produto roupas"
             <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m2afie1yvsdt05.webp" alt="Roupa Feminina">
             <h3>Vestido Floral</h3>
             <p>R$ 118,99</p>
             <a href="https://s.shopee.com.br/9UoVWJ56TW?share_channel_code=1" class="botao">Comprar na Shopee</a>
         </div>
 
-        <div class="produto" id="acessorios">
+        <div class="produto acessorios"
             <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lmx6i14ecqykc1.webp" alt="Acessório">
             <h3>Relógio Inteligente</h3>
             <p>R$ 59,00</p>
             <a href="https://s.shopee.com.br/5pvD9beBTq?share_channel_code=1" class="botao">Comprar na Shopee</a>
         </div>
 
-        <div class="produto">
+        <div class="produto roupas"
             <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lxex8099x5fj88@resize_w450_nl.webp" alt="Produto Promoção">
             <h3>Tênis Esportivo Unissex</h3>
             <p>R$ 106,90</p>
             <a href="https://s.shopee.com.br/2B1umvm7xQ?share_channel_code=1" class="botao">Comprar na Shopee</a>
         </div>
 
-        <div class="produto">
+        <div class="produto eletronicos"
             <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lyf8bvod9iw526.webp" alt="Produto Eletronico">
             <h3>Caixa de Som Bluetooth</h3>
             <p>R$ 109,90</p>
@@ -221,5 +228,25 @@
 
     <a href="#topo" class="topo">↑</a>
 
+    <script>
+    function filtrarProdutos(categoria) {
+        var produtos = document.querySelectorAll('.produto');
+        produtos.forEach(function(produto) {
+            if (!produto.classList.contains(categoria)) {
+                produto.classList.add('hidden');
+            } else {
+                produto.classList.remove('hidden');
+            }
+        });
+    }
+
+    function mostrarTodos() {
+        var produtos = document.querySelectorAll('.produto');
+        produtos.forEach(function(produto) {
+            produto.classList.remove('hidden');
+        });
+    }
+</script>
+    
 </body>
 </html>
