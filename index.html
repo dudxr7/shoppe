@@ -11,9 +11,6 @@
         }
         </style>
 
-</head>
-<body>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
@@ -224,26 +221,6 @@
     </section>
 
     <a href="#topo" class="topo">↑</a>
-
-    <script>
-    function filtrarProdutos(categoria) {
-        var produtos = document.querySelectorAll('.produto');
-        produtos.forEach(function(produto) {
-            if (!produto.classList.contains(categoria)) {
-                produto.classList.add('hidden');
-            } else {
-                produto.classList.remove('hidden');
-            }
-        });
-    }
-
-    function mostrarTodos() {
-        var produtos = document.querySelectorAll('.produto');
-        produtos.forEach(function(produto) {
-            produto.classList.remove('hidden');
-        });
-    }
-</script>
     
 </body>
 </html>
